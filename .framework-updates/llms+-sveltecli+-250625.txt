@@ -1,0 +1,1325 @@
+TITLE: Initializing SvelteKit Project with `sv create` (Bash)
+DESCRIPTION: This `bash` command uses `npx` to execute the `sv create` CLI tool, setting up a new SvelteKit project. Users can specify various options to customize the project's template, typechecking, and dependency installation, along with an optional `path` for the new project directory.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/20-commands/10-sv-create.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv create [options] [path]
+```
+
+----------------------------------------
+
+TITLE: Starting a Svelte Development Server (Bash)
+DESCRIPTION: After installing dependencies, these commands start a local development server for the Svelte application. The `--open` flag can be used to automatically open the application in a new browser tab upon server startup.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/shared/README.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+----------------------------------------
+
+TITLE: Running Svelte CLI with npx (Bash)
+DESCRIPTION: This snippet demonstrates the standard way to execute the Svelte CLI (`sv`) using `npx`. It allows running `sv` commands with arguments, leveraging either a local installation or downloading the latest version if not found locally, which is particularly useful for `sv create`.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/10-introduction/10-overview.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv <command> <args>
+```
+
+----------------------------------------
+
+TITLE: Creating a Svelte Project using sv CLI (Bash)
+DESCRIPTION: This snippet demonstrates how to initialize a new Svelte project using the `sv create` command-line interface. It shows options for creating a project in the current directory or a specified new directory.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/shared/+library/README.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+# create a new project in the current directory
+npx sv create
+
+# create a new project in my-app
+npx sv create my-app
+```
+
+----------------------------------------
+
+TITLE: Building a Svelte Production Application (Bash)
+DESCRIPTION: This command compiles the Svelte application into a production-ready build. The resulting output is optimized for deployment and can be previewed using `npm run preview`.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/shared/README.md#_snippet_2
+
+LANGUAGE: bash
+CODE:
+```
+npm run build
+```
+
+----------------------------------------
+
+TITLE: Starting Svelte Development Server (Bash)
+DESCRIPTION: This snippet shows how to start the development server for a Svelte project after installing dependencies. It includes options to simply start the server or open the application in a new browser tab automatically.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/shared/+library/README.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+----------------------------------------
+
+TITLE: Building Svelte Showcase Application (Bash)
+DESCRIPTION: This snippet shows the command to create a production-ready build of your Svelte showcase application. This build can then be previewed or deployed to a target environment.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/shared/+library/README.md#_snippet_3
+
+LANGUAGE: bash
+CODE:
+```
+npm run build
+```
+
+----------------------------------------
+
+TITLE: Adding Vitest to Svelte Project
+DESCRIPTION: This command uses `npx sv add vitest` to integrate the Vitest testing framework into a Svelte project. It automates the installation of relevant packages, adds necessary scripts to `package.json`, and sets up client/server-aware testing in the Vite configuration file, including demo tests.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/55-vitest.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add vitest
+```
+
+----------------------------------------
+
+TITLE: Initializing Svelte CLI
+DESCRIPTION: This command executes the Svelte CLI (`sv`) using `npx`, a tool for running Node.js package executables. It's the primary way to interact with the CLI for creating or managing Svelte applications without globally installing the package.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/cli/README.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv
+```
+
+----------------------------------------
+
+TITLE: Adding Drizzle ORM with PostgreSQL, postgres.js, and Docker (Bash)
+DESCRIPTION: This command integrates Drizzle ORM with PostgreSQL and the `postgres.js` client, additionally including Docker Compose configuration. The `docker:yes` option facilitates running a local database instance, and is only available for PostgreSQL or MySQL databases.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/05-drizzle.md#_snippet_3
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add drizzle=database:postgresql+client:postgres.js+docker:yes
+```
+
+----------------------------------------
+
+TITLE: Adding Specific SvelteKit Adapter using Svelte CLI (Bash)
+DESCRIPTION: This command illustrates how to add a specific SvelteKit adapter, such as '@sveltejs/adapter-node', by passing it as an option to the 'sv add' command. This allows for precise control over which deployment target your SvelteKit application is configured for.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/45-sveltekit-adapter.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add sveltekit-adapter=adapter:node
+```
+
+----------------------------------------
+
+TITLE: Adding SvelteKit Adapter using Svelte CLI (Bash)
+DESCRIPTION: This command demonstrates how to add the 'sveltekit-adapter' using the Svelte CLI. Executing this will install and configure the chosen SvelteKit adapter within your 'svelte.config.js' file, preparing your SvelteKit project for deployment.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/45-sveltekit-adapter.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add sveltekit-adapter
+```
+
+----------------------------------------
+
+TITLE: Adding Prettier with Svelte CLI
+DESCRIPTION: This command utilizes the Svelte CLI's `add` feature to automatically install and configure Prettier in a Svelte project. It sets up necessary configuration files (`.prettierignore`, `.prettierrc`) and adds relevant scripts to `package.json`.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/35-prettier.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add prettier
+```
+
+----------------------------------------
+
+TITLE: Adding Storybook to Svelte Project using sv CLI
+DESCRIPTION: This command uses the `sv` CLI to add Storybook to a Svelte project. It automates the setup process, including running `npx storybook init` and configuring Storybook for SvelteKit or Svelte & Vite, providing default configurations and module mocking. This simplifies the integration of Storybook into Svelte applications.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/40-storybook.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add storybook
+```
+
+----------------------------------------
+
+TITLE: Installing svelte-check package
+DESCRIPTION: This command installs the `svelte-check` package as a development dependency in your project. It is a prerequisite for using the `sv check` command-line utility.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/20-commands/30-sv-check.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npm i -D svelte-check
+```
+
+----------------------------------------
+
+TITLE: Adding Tailwind CSS with Typography Plugin (Bash)
+DESCRIPTION: This command adds Tailwind CSS to a Svelte project and specifically includes the `@tailwindcss/typography` plugin. It demonstrates how to pass options to the `sv add tailwindcss` command to customize the installation with specific plugins.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/50-tailwind.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add tailwindcss="plugins:typography"
+```
+
+----------------------------------------
+
+TITLE: Initializing Drizzle ORM in SvelteKit (Bash)
+DESCRIPTION: This command uses the SvelteKit CLI to add Drizzle ORM to the current project. It sets up database access within SvelteKit's server files, creates an .env file for credentials, and ensures compatibility with the Lucia auth add-on.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/05-drizzle.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add drizzle
+```
+
+----------------------------------------
+
+TITLE: Creating a Svelte Project using sv CLI (Bash)
+DESCRIPTION: These commands demonstrate how to initialize a new Svelte project using the `npx sv create` command. Users can either create a project in the current directory or specify a new directory name for the project.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/shared/README.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+# create a new project in the current directory
+npx sv create
+
+# create a new project in my-app
+npx sv create my-app
+```
+
+----------------------------------------
+
+TITLE: Executing `sv migrate` command
+DESCRIPTION: This command runs the `sv migrate` tool without specifying a particular migration, allowing it to detect and apply relevant migrations automatically. It's the general way to initiate a codebase migration.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/20-commands/40-sv-migrate.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv migrate
+```
+
+----------------------------------------
+
+TITLE: Adding ESLint to Svelte Project (Bash)
+DESCRIPTION: This command utilizes the Svelte CLI (`sv`) to automate the setup of ESLint in a Svelte project. It installs essential packages, including `eslint-plugin-svelte`, creates an `eslint.config.js` configuration file, and updates `.vscode/settings.json` to ensure compatibility with TypeScript and Prettier if they are in use.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/10-eslint.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add eslint
+```
+
+----------------------------------------
+
+TITLE: Executing Multiple Tasks with Clack Prompts (JavaScript)
+DESCRIPTION: This snippet demonstrates the `tasks` utility, which allows executing a series of asynchronous operations, typically displayed with spinners. Each task is defined with a `title` and an asynchronous `task` function.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/clack-prompts/README.md#_snippet_8
+
+LANGUAGE: JavaScript
+CODE:
+```
+await p.tasks([
+  {
+    title: 'Installing via npm',
+    task: async (message) => {
+      // Do installation here
+      return 'Installed via npm';
+    }
+  }
+]);
+```
+
+----------------------------------------
+
+TITLE: Running sv CLI with npm
+DESCRIPTION: This command demonstrates how to execute the `sv` CLI's `create` command using `npx` for npm users. `npx` is used to run packages from the npm registry without globally installing them.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/10-introduction/20-faq.md#_snippet_0
+
+LANGUAGE: Shell
+CODE:
+```
+npx sv create
+```
+
+----------------------------------------
+
+TITLE: Adding Tailwind CSS to Svelte Project (Bash)
+DESCRIPTION: This command initializes Tailwind CSS setup in a Svelte project using the `sv` CLI tool. It integrates Tailwind CSS according to the official SvelteKit guide, including the Vite plugin and updating relevant CSS and layout files.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/50-tailwind.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add tailwindcss
+```
+
+----------------------------------------
+
+TITLE: Running sv CLI with Yarn dlx
+DESCRIPTION: This command demonstrates how to run the `sv` CLI's `create` command using `yarn dlx` for Yarn users. `dlx` is Yarn's utility for executing packages.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/10-introduction/20-faq.md#_snippet_5
+
+LANGUAGE: Shell
+CODE:
+```
+yarn dlx sv create
+```
+
+----------------------------------------
+
+TITLE: Adding Playwright to Svelte Project (Bash)
+DESCRIPTION: This command demonstrates how to integrate Playwright browser testing into a Svelte project using the Svelte CLI. It automates the setup by adding necessary scripts to `package.json`, creating a Playwright configuration file, updating the `.gitignore` to exclude test-related files, and including a basic demo test to get started quickly.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/30-playwright.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add playwright
+```
+
+----------------------------------------
+
+TITLE: Initializing TextPrompt with Custom Render Function (JavaScript)
+DESCRIPTION: This snippet demonstrates how to create and use a `TextPrompt` from `@clack/core`. It initializes a new prompt with a custom `render` function that defines the prompt's display, including the current input value. The `prompt()` method awaits user input, and `isCancel` is used to check if the user cancelled the prompt, exiting the process if so.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/clack-core/README.md#_snippet_0
+
+LANGUAGE: JavaScript
+CODE:
+```
+import { TextPrompt, isCancel } from '@clack/core';
+
+const p = new TextPrompt({
+  render() {
+    return `What's your name?\n${this.valueWithCursor}`;
+  }
+});
+
+const name = await p.prompt();
+if (isCancel(name)) {
+  process.exit(0);
+}
+```
+
+----------------------------------------
+
+TITLE: Running sv check
+DESCRIPTION: This command executes the `sv check` utility using `npx`, which allows running packages without globally installing them. It performs a default check for errors and warnings across your Svelte project.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/20-commands/30-sv-check.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npx sv check
+```
+
+----------------------------------------
+
+TITLE: Adding Specific Add-ons to Svelte Project - Bash
+DESCRIPTION: This command allows users to directly add one or more specified add-ons to their Svelte project by listing them space-separated. It bypasses the interactive prompt, useful for automated scripts or when the desired add-ons are already known. Refer to the 'Official add-ons' section for available options.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/20-commands/20-sv-add.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add [add-ons]
+```
+
+----------------------------------------
+
+TITLE: Grouping Prompts with Clack Prompts (JavaScript)
+DESCRIPTION: This example showcases the `group` utility, which allows organizing multiple prompts into a single logical unit. It accepts an object of prompt functions and an optional `onCancel` callback to handle cancellation for any prompt within the group.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/clack-prompts/README.md#_snippet_7
+
+LANGUAGE: JavaScript
+CODE:
+```
+import * as p from '@clack/prompts';
+
+const group = await p.group(
+  {
+    name: () => p.text({ message: 'What is your name?' }),
+    age: () => p.text({ message: 'What is your age?' }),
+    color: ({ results }) =>
+      p.multiselect({
+        message: `What is your favorite color ${results.name}?`,
+        options: [
+          { value: 'red', label: 'Red' },
+          { value: 'green', label: 'Green' },
+          { value: 'blue', label: 'Blue' }
+        ]
+      })
+  },
+  {
+    // On Cancel callback that wraps the group
+    // So if the user cancels one of the prompts in the group this function will be called
+    onCancel: ({ results }) => {
+      p.cancel('Operation cancelled.');
+      process.exit(0);
+    }
+  }
+);
+
+console.log(group.name, group.age, group.color);
+```
+
+----------------------------------------
+
+TITLE: Adding Functionality to Svelte Project (Interactive) - Bash
+DESCRIPTION: This command initiates the `sv add` process without specifying any add-ons, leading to an an interactive prompt where the user can select desired functionalities to add to their Svelte project. It's used for general updates or when exploring available options.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/20-commands/20-sv-add.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add
+```
+
+----------------------------------------
+
+TITLE: Handling User Cancellation with Clack Prompts (JavaScript)
+DESCRIPTION: This example shows how to detect user cancellation (e.g., via CTRL + C) using the `isCancel` guard and provide a graceful exit message with the `cancel` utility, ensuring a robust user experience.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/clack-prompts/README.md#_snippet_1
+
+LANGUAGE: JavaScript
+CODE:
+```
+import { isCancel, cancel, text } from '@clack/prompts';
+
+const value = await text(/* TODO */);
+
+if (isCancel(value)) {
+  cancel('Operation cancelled.');
+  process.exit(0);
+}
+```
+
+----------------------------------------
+
+TITLE: Adding Paraglide.js to SvelteKit Project (Bash)
+DESCRIPTION: This command initializes Paraglide.js integration into a SvelteKit project. It sets up necessary configurations like Inlang project settings, Vite plugin, SvelteKit hooks, and updates `app.html` and `.gitignore`.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/25-paraglide.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add paraglide
+```
+
+----------------------------------------
+
+TITLE: Adding Lucia Auth to SvelteKit using CLI
+DESCRIPTION: This command uses the SvelteKit CLI to add Lucia authentication to your project. It sets up the necessary configurations for SvelteKit and Drizzle, following best practices from the Lucia auth guide.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/15-lucia.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add lucia
+```
+
+----------------------------------------
+
+TITLE: Handling Load Function Returning Non-Object Literal - JavaScript
+DESCRIPTION: This snippet demonstrates a `load` function that returns a value which is not a plain object literal (e.g., the result of `await res.json()`). The migration tool cannot automatically process this and adds a migration task comment.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_js/samples.md#_snippet_13
+
+LANGUAGE: js
+CODE:
+```
+export async function load({ fetch }) {
+	const res = await fetch('/x.json');
+	return await res.json();
+}
+```
+
+LANGUAGE: js
+CODE:
+```
+export async function load({ fetch }) {
+	const res = await fetch('/x.json');
+	throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292693)");
+	return await res.json();
+}
+```
+
+----------------------------------------
+
+TITLE: Running All Project Tests
+DESCRIPTION: Execute this command from the root of the project to run all integration tests. These tests verify the functionality of add-ons by installing dependencies, building the app, and running snippets against them.
+SOURCE: https://github.com/sveltejs/cli/blob/main/CONTRIBUTING.md#_snippet_6
+
+LANGUAGE: bash
+CODE:
+```
+pnpm test
+```
+
+----------------------------------------
+
+TITLE: Handling Unmigratable GET Returns in SvelteKit Endpoints
+DESCRIPTION: This snippet highlights complex `GET` endpoint return scenarios that cannot be automatically migrated by SvelteKit's migration tool. It shows cases involving conditional returns, `ReadableStream` bodies, or plain string bodies with headers, which now require manual migration to `Response` objects or throwing errors for unsupported patterns.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_server/samples.md#_snippet_4
+
+LANGUAGE: javascript
+CODE:
+```
+export function GET() {
+	if (a) {
+		return {
+			body
+		};
+	} else if (b) {
+		return {
+			body: new ReadableStream(),
+			headers: {
+				'content-type': 'octasomething'
+			}
+		}
+	} else if (c) {
+		return {
+			body: 'string',
+			headers: {
+				'x-foo': 'bar'
+			}
+		}
+	}
+}
+```
+
+LANGUAGE: javascript
+CODE:
+```
+import { json } from '@sveltejs/kit';
+
+export function GET() {
+	if (a) {
+		throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
+		// Suggestion (check for correctness before using):
+		// return json(body);
+		return {
+			body
+		};
+	} else if (b) {
+		throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
+		// Suggestion (check for correctness before using):
+		// return new Response(new ReadableStream(), {
+		// 	headers: {
+		// 		'content-type': 'octasomething'
+		// 	}
+		// });
+		return {
+			body: new ReadableStream(),
+			headers: {
+				'content-type': 'octasomething'
+			}
+		}
+	} else if (c) {
+		return new Response('string', {
+			headers: {
+				'x-foo': 'bar'
+			}
+		})
+	}
+}
+```
+
+----------------------------------------
+
+TITLE: Initializing Clack Prompts Session (JavaScript)
+DESCRIPTION: This snippet demonstrates how to use the `intro` and `outro` functions from `@clack/prompts` to mark the beginning and end of a command-line prompt session, providing clear visual cues to the user.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/clack-prompts/README.md#_snippet_0
+
+LANGUAGE: JavaScript
+CODE:
+```
+import { intro, outro } from '@clack/prompts';
+
+intro(`create-my-app`);
+// Do stuff
+outro(`You're all set!`);
+```
+
+----------------------------------------
+
+TITLE: Removing `throw` for SvelteKit `redirect` and `error` Functions (JavaScript)
+DESCRIPTION: This snippet demonstrates the migration from explicitly throwing `redirect()` or `error()` functions from `@sveltejs/kit` to simply calling them. The SvelteKit runtime now handles the control flow, making `throw` unnecessary for these specific functions. Calls to `redirect()` or `error()` within other contexts or when assigned to variables are unaffected.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/sveltekit-2/tsjs-samples.md#_snippet_0
+
+LANGUAGE: javascript
+CODE:
+```
+import { redirect, error } from '@sveltejs/kit';
+
+throw redirect();
+redirect();
+throw error();
+error();
+function x() {
+	let redirect = true;
+	throw redirect();
+}
+```
+
+LANGUAGE: javascript
+CODE:
+```
+import { redirect, error } from '@sveltejs/kit';
+
+redirect();
+redirect();
+error();
+error();
+function x() {
+	let redirect = true;
+	throw redirect();
+}
+```
+
+----------------------------------------
+
+TITLE: Building Svelte Library Package (Bash)
+DESCRIPTION: This snippet demonstrates the command to build and package your Svelte library for distribution. This process compiles your `src/lib` code into a distributable format.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/shared/+library/README.md#_snippet_2
+
+LANGUAGE: bash
+CODE:
+```
+npm run package
+```
+
+----------------------------------------
+
+TITLE: Handling GET Function Returning Response Object in SvelteKit
+DESCRIPTION: This snippet shows a SvelteKit `GET` endpoint that already returns a `Response` object. This pattern is compatible with the newer SvelteKit API, so no migration is required. It demonstrates the correct way to return non-JSON or custom responses.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_server/samples.md#_snippet_5
+
+LANGUAGE: javascript
+CODE:
+```
+export const GET = () => new Response('text');
+```
+
+LANGUAGE: javascript
+CODE:
+```
+export const GET = () => new Response('text');
+```
+
+----------------------------------------
+
+TITLE: Running sv CLI with pnpx (pnpm)
+DESCRIPTION: This command shows how to run the `sv` CLI's `create` command using `pnpx` for pnpm users. `pnpx` is pnpm's equivalent to `npx` for executing packages.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/10-introduction/20-faq.md#_snippet_1
+
+LANGUAGE: Shell
+CODE:
+```
+pnpx sv create
+```
+
+----------------------------------------
+
+TITLE: Formatting Code with pnpm
+DESCRIPTION: This command automatically formats the project's code according to the established style guide. Running it from the project root ensures consistent formatting across all files and packages.
+SOURCE: https://github.com/sveltejs/cli/blob/main/CONTRIBUTING.md#_snippet_12
+
+LANGUAGE: bash
+CODE:
+```
+pnpm format
+```
+
+----------------------------------------
+
+TITLE: Adding Lucia Auth with Demo Pages using CLI
+DESCRIPTION: This command extends the Lucia auth setup by including optional demo registration and login pages. The `demo:yes` option ensures these pages are generated, providing a quick start for testing authentication flows.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/15-lucia.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add lucia=demo:yes
+```
+
+----------------------------------------
+
+TITLE: Using the Confirm Component in Clack Prompts (JavaScript)
+DESCRIPTION: This example demonstrates the `confirm` component, which prompts the user for a simple yes or no answer and returns a boolean value (`true` for yes, `false` for no).
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/clack-prompts/README.md#_snippet_3
+
+LANGUAGE: JavaScript
+CODE:
+```
+import { confirm } from '@clack/prompts';
+
+const shouldContinue = await confirm({
+  message: 'Do you want to continue?'
+});
+```
+
+----------------------------------------
+
+TITLE: Configuring compiler warning behavior with sv check
+DESCRIPTION: This command uses the `--compiler-warnings` option to specify how `sv check` should handle particular Svelte compiler warnings. It allows setting a warning code to either `ignore` or treat as an `error`.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/20-commands/30-sv-check.md#_snippet_3
+
+LANGUAGE: bash
+CODE:
+```
+npx sv check --compiler-warnings "css_unused_selector:ignore,a11y_missing_attribute:error"
+```
+
+----------------------------------------
+
+TITLE: Migrating GET Function Returning JSON with Custom Headers in SvelteKit
+DESCRIPTION: This snippet illustrates how to migrate a SvelteKit `GET` endpoint that returns a JSON object along with custom HTTP headers. The old method included headers directly in the returned object. The new approach passes headers as a second argument to the `json` helper function, maintaining separation of concerns.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_server/samples.md#_snippet_2
+
+LANGUAGE: javascript
+CODE:
+```
+export function GET() {
+	return {
+		headers: {
+			'x-foo': '123'
+		},
+		body: {
+			a: 1
+		}
+	};
+}
+```
+
+LANGUAGE: javascript
+CODE:
+```
+import { json } from '@sveltejs/kit';
+
+export function GET() {
+	return json({
+		a: 1
+	}, {
+		headers: {
+			'x-foo': '123'
+		}
+	});
+}
+```
+
+----------------------------------------
+
+TITLE: Migrating GET Function Returning Body in JavaScript
+DESCRIPTION: This snippet demonstrates migrating a JavaScript `GET` function that previously returned a `body` object to the new `load` function, where the body content is returned directly. It shows the transition from `RequestHandler` to `PageServerLoad`.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_server/samples.md#_snippet_0
+
+LANGUAGE: javascript
+CODE:
+```
+/** @type {import('./$types').RequestHandler} */
+export function GET() {
+	return {
+		body: {
+			a: 1
+		}
+	};
+}
+```
+
+LANGUAGE: javascript
+CODE:
+```
+/** @type {import('./$types').PageServerLoad} */
+export function load() {
+	return {
+		a: 1
+	};
+}
+```
+
+----------------------------------------
+
+TITLE: Migrating Load Function Returning Props - JavaScript
+DESCRIPTION: This snippet demonstrates the migration of a JavaScript `load` function that previously returned data wrapped in a `props` object. The updated pattern directly returns the data, aligning with SvelteKit's simplified data handling.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_js/samples.md#_snippet_0
+
+LANGUAGE: js
+CODE:
+```
+/** @type {import('./$types').Load} */
+export function load() {
+	return {
+		props: {
+			a: 1
+		}
+	};
+}
+```
+
+LANGUAGE: js
+CODE:
+```
+/** @type {import('./$types').PageLoad} */
+export function load() {
+	return {
+		a: 1
+	};
+}
+```
+
+----------------------------------------
+
+TITLE: Configuring Cloudflare Pages Build Command
+DESCRIPTION: Specifies the build command used by Cloudflare Pages to install dependencies and build the SvelteKit project. It first installs pnpm globally, then installs project dependencies, and finally builds the project recursively.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/templates/demo/README.md#_snippet_0
+
+LANGUAGE: Shell
+CODE:
+```
+npm i -g pnpm && pnpm i && pnpm build -r
+```
+
+----------------------------------------
+
+TITLE: Installing pnpm Globally
+DESCRIPTION: This command installs the pnpm package manager globally on your system using npm. pnpm is required for managing dependencies in this monorepo, offering efficient disk space usage and faster installations.
+SOURCE: https://github.com/sveltejs/cli/blob/main/CONTRIBUTING.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npm i -g pnpm
+```
+
+----------------------------------------
+
+TITLE: Migrating GET Arrow Function Returning JSON Object in SvelteKit
+DESCRIPTION: This example demonstrates the migration of a SvelteKit `GET` endpoint defined as an arrow function that returns a JSON object. Similar to regular functions, the migration involves replacing the direct object return with a call to the `json` helper from `@sveltejs/kit` for consistency and proper response handling.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_server/samples.md#_snippet_3
+
+LANGUAGE: javascript
+CODE:
+```
+export const GET = () => ({
+	body: {
+		a: 1
+	}
+});
+```
+
+LANGUAGE: javascript
+CODE:
+```
+import { json } from '@sveltejs/kit';
+
+export const GET = () => json({
+	a: 1
+});
+```
+
+----------------------------------------
+
+TITLE: Migrating GET Function Returning JSON Object in SvelteKit
+DESCRIPTION: This snippet demonstrates the migration of a SvelteKit `GET` endpoint. Previously, JSON responses were returned as an object with a `body` property. The updated approach uses the `json` helper function from `@sveltejs/kit` to directly return a JSON object, simplifying the response structure.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_server/samples.md#_snippet_0
+
+LANGUAGE: javascript
+CODE:
+```
+export function GET() {
+	return {
+		body: {
+			a: 1
+		}
+	};
+}
+```
+
+LANGUAGE: javascript
+CODE:
+```
+import { json } from '@sveltejs/kit';
+
+export function GET() {
+	return json({
+		a: 1
+	});
+}
+```
+
+----------------------------------------
+
+TITLE: Migrating GET Function with Import and Body in JavaScript
+DESCRIPTION: This snippet shows the migration of a `GET` function that includes an import statement and returns a `body` containing an imported value. The `RequestHandler` is updated to `PageServerLoad`, and the return structure changes to directly return the data.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_server/samples.md#_snippet_8
+
+LANGUAGE: javascript
+CODE:
+```
+import something from 'somewhere';
+
+/** @type {import('./$types').RequestHandler} */
+export function get() {
+	return {
+		body: {
+			a: something
+		}
+	};
+}
+```
+
+LANGUAGE: javascript
+CODE:
+```
+import something from 'somewhere';
+
+/** @type {import('./$types').PageServerLoad} */
+export function load() {
+	return {
+		a: something
+	};
+}
+```
+
+----------------------------------------
+
+TITLE: Migrating Arrow Function GET in JavaScript
+DESCRIPTION: This snippet illustrates the migration of a `GET` function defined as an arrow function. The `RequestHandler` type is updated to `PageServerLoad`, and the return structure changes from `body` encapsulation to direct data return.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_server/samples.md#_snippet_4
+
+LANGUAGE: javascript
+CODE:
+```
+/** @type {import('./$types').RequestHandler} */
+export const GET = () => ({
+	body: {
+		a: 1
+	}
+});
+```
+
+LANGUAGE: javascript
+CODE:
+```
+/** @type {import('./$types').PageServerLoad} */
+export const load = () => ({
+	a: 1
+});
+```
+
+----------------------------------------
+
+TITLE: Migrating GET Function in SvelteKit Layout Server File (JavaScript)
+DESCRIPTION: This snippet shows the migration of a `GET` function within a `+layout-foo.server.js` file. The `RequestHandler` is replaced by `LayoutServerLoad.foo`, and the return structure changes from wrapping data in `body` to returning it directly.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_server/samples.md#_snippet_2
+
+LANGUAGE: javascript
+CODE:
+```
+/** @type {import('./$types').RequestHandler} */
+export function GET() {
+	return {
+		body: {
+			a: 1
+		}
+	};
+}
+```
+
+LANGUAGE: javascript
+CODE:
+```
+/** @type {import('./$types').LayoutServerLoad.foo} */
+export function load() {
+	return {
+		a: 1
+	};
+}
+```
+
+----------------------------------------
+
+TITLE: Configuring Drizzle ORM with PostgreSQL and postgres.js Client (Bash)
+DESCRIPTION: This command further refines the Drizzle ORM setup by selecting `postgresql` as the database and `postgres.js` as the specific SQL client. This ensures the project is configured to interact with a PostgreSQL database using the `postgres.js` driver.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/05-drizzle.md#_snippet_2
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add drizzle=database:postgresql+client:postgres.js
+```
+
+----------------------------------------
+
+TITLE: Configuring Vercel Install Command
+DESCRIPTION: Defines the command Vercel uses to install project dependencies and build the SvelteKit application. It installs pnpm globally, then project dependencies, and finally builds recursively.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/templates/demo/README.md#_snippet_4
+
+LANGUAGE: Shell
+CODE:
+```
+npm install -g pnpm && pnpm install && pnpm build -r
+```
+
+----------------------------------------
+
+TITLE: Adding mdsvex to Svelte Project using CLI
+DESCRIPTION: This command uses the Svelte CLI (`npx sv`) to automatically install and configure mdsvex within a Svelte project. It simplifies the setup process by handling dependencies and updating `svelte.config.js`.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/20-mdsvex.md#_snippet_0
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add mdsvex
+```
+
+----------------------------------------
+
+TITLE: Migrating POST Function in JavaScript
+DESCRIPTION: This snippet shows the migration of a `POST` function. The `RequestHandler` type is updated to `Action`, and a migration task comment is added to highlight changes in handling return values for actions.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_server/samples.md#_snippet_5
+
+LANGUAGE: javascript
+CODE:
+```
+/** @type {import('./$types').RequestHandler} */
+export function POST() {
+	return {};
+}
+```
+
+LANGUAGE: javascript
+CODE:
+```
+/** @type {import('./$types').Action} */
+export function POST() {
+	throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292699)");
+	return {};
+}
+```
+
+----------------------------------------
+
+TITLE: Configuring Paraglide.js Language Tags (Bash)
+DESCRIPTION: This command adds Paraglide.js to a SvelteKit project, specifying the supported IETF BCP 47 language tags. It allows developers to define multiple languages like English (`en`) and Spanish (`es`) for internationalization.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/25-paraglide.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add paraglide="languageTags:en,es"
+```
+
+----------------------------------------
+
+TITLE: Adding Drizzle ORM with PostgreSQL Database (Bash)
+DESCRIPTION: This command extends the Drizzle ORM setup by specifying `postgresql` as the desired database variant. It configures the project to use PostgreSQL, which is a popular open-source relational database, for data storage.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/05-drizzle.md#_snippet_1
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add drizzle=database:postgresql
+```
+
+----------------------------------------
+
+TITLE: Updating 'vitePreprocess' Import Path (After) - JavaScript
+DESCRIPTION: This snippet shows the SvelteKit configuration with the updated import path for 'vitePreprocess', now correctly imported from '@sveltejs/vite-plugin-svelte'. This is the recommended path for newer SvelteKit versions.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/sveltekit-2/svelte-config-samples.md#_snippet_5
+
+LANGUAGE: javascript
+CODE:
+```
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://svelte.dev/docs/kit/integrations#preprocessors
+	// for more information about preprocessors
+	preprocess: vitePreprocess(),
+
+	kit: {
+		adapter: adapter()
+	}
+};
+
+export default config;
+```
+
+----------------------------------------
+
+TITLE: Replacing `resolvePath` and Managing Imports in SvelteKit (JavaScript)
+DESCRIPTION: This example shows the comprehensive migration of `resolvePath` to `resolveRoute`, including the necessary import statement adjustments. If `resolvePath` is the only import from `@sveltejs/kit`, its import is removed; otherwise, `resolveRoute` is added to `$app/paths` imports, ensuring correct module resolution.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/sveltekit-2/tsjs-samples.md#_snippet_7
+
+LANGUAGE: javascript
+CODE:
+```
+import { resolvePath, x } from '@sveltejs/kit';
+import { y } from '$app/paths';
+
+resolvePath('x');
+```
+
+LANGUAGE: javascript
+CODE:
+```
+import { x } from '@sveltejs/kit';
+import { y, resolveRoute } from '$app/paths';
+
+resolveRoute('x');
+```
+
+----------------------------------------
+
+TITLE: Migrating Load Function Returning Props and Status 200 - JavaScript
+DESCRIPTION: This example demonstrates that a `load` function returning both `props` and an explicit `status: 200` is simplified to just return the data directly, as `200` is the default success status and no longer needs to be explicitly stated.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_js/samples.md#_snippet_18
+
+LANGUAGE: js
+CODE:
+```
+export function load() {
+	return {
+		status: 200,
+		props: {}
+	};
+}
+```
+
+LANGUAGE: js
+CODE:
+```
+export function load() {
+	return {};
+}
+```
+
+----------------------------------------
+
+TITLE: Publishing Svelte Library to npm (Bash)
+DESCRIPTION: This snippet provides the command to publish your Svelte library to the npm registry. Before publishing, ensure your `package.json` has the correct name and license information.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/shared/+library/README.md#_snippet_4
+
+LANGUAGE: bash
+CODE:
+```
+npm publish
+```
+
+----------------------------------------
+
+TITLE: Migrating Load Function with Redirect - JavaScript
+DESCRIPTION: This example shows the migration of a `load` function that performs a redirect. Instead of returning an object with `status` and `redirect` properties, the updated code throws a `redirect` function imported from `@sveltejs/kit`.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_js/samples.md#_snippet_4
+
+LANGUAGE: js
+CODE:
+```
+export function load({ session }) {
+	if (!session.user) {
+		return {
+			status: 307,
+			redirect: '/login'
+		};
+	}
+
+	return {
+		props: {
+			a: 1
+		}
+	};
+}
+```
+
+LANGUAGE: js
+CODE:
+```
+import { redirect } from '@sveltejs/kit';
+
+export function load({ session }) {
+	if (!session.user) {
+		throw redirect(307, '/login');
+	}
+
+	return {
+		a: 1
+	}
+}
+```
+
+----------------------------------------
+
+TITLE: Migrating Load Function with Error Constructor - JavaScript
+DESCRIPTION: This example shows the migration of a `load` function that returns an error object created with an `Error` constructor. The updated code throws an `error` function from `@sveltejs/kit`, passing the status and the error message.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_js/samples.md#_snippet_6
+
+LANGUAGE: js
+CODE:
+```
+export function load({ session }) {
+	if (!session.user?.admin) {
+		return {
+			status: 403,
+			error: new Error('unauthorized')
+		};
+	}
+}
+```
+
+LANGUAGE: js
+CODE:
+```
+import { error } from '@sveltejs/kit';
+
+export function load({ session }) {
+	if (!session.user?.admin) {
+		throw error(403, 'unauthorized');
+	}
+}
+```
+
+----------------------------------------
+
+TITLE: Enabling Paraglide.js Demo Page (Bash)
+DESCRIPTION: This command integrates Paraglide.js and optionally generates a demo page within the SvelteKit project. The demo page provides a practical example of how to utilize Paraglide.js for internationalization features.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/30-add-ons/25-paraglide.md#_snippet_2
+
+LANGUAGE: bash
+CODE:
+```
+npx sv add paraglide="demo:yes"
+```
+
+----------------------------------------
+
+TITLE: Configuring Vercel Root Directory
+DESCRIPTION: Specifies the root directory for the Vercel deployment, indicating the base path for the project.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/create/templates/demo/README.md#_snippet_5
+
+LANGUAGE: Text
+CODE:
+```
+packages/create-svelte/templates/default
+```
+
+----------------------------------------
+
+TITLE: Migrating Load Function with Status Only Error - JavaScript
+DESCRIPTION: This example demonstrates the migration of a `load` function that previously returned only a `status` property to indicate an error. The updated code now throws an `error` function from `@sveltejs/kit` with just the status code.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_js/samples.md#_snippet_8
+
+LANGUAGE: js
+CODE:
+```
+export function load() {
+	return { status: 518 };
+}
+```
+
+LANGUAGE: js
+CODE:
+```
+import { error } from '@sveltejs/kit';
+
+export function load() {
+	throw error(518);
+}
+```
+
+----------------------------------------
+
+TITLE: Migrating Load Function with String Error - JavaScript
+DESCRIPTION: This snippet demonstrates how a `load` function returning an error object with a string message is migrated. The new approach involves throwing an `error` function from `@sveltejs/kit` with the status and message.
+SOURCE: https://github.com/sveltejs/cli/blob/main/packages/migrate/migrations/routes/migrate_page_js/samples.md#_snippet_5
+
+LANGUAGE: js
+CODE:
+```
+export function load({ session }) {
+	if (!session.user?.admin) {
+		return {
+			status: 403,
+			error: 'unauthorized'
+		};
+	}
+}
+```
+
+LANGUAGE: js
+CODE:
+```
+import { error } from '@sveltejs/kit';
+
+export function load({ session }) {
+	if (!session.user?.admin) {
+		throw error(403, 'unauthorized');
+	}
+}
+```
+
+----------------------------------------
+
+TITLE: Running sv CLI with Deno
+DESCRIPTION: This command shows how to execute the `sv` CLI's `create` command using Deno. It directly runs the `sv` package from npm via Deno's `npm:` specifier.
+SOURCE: https://github.com/sveltejs/cli/blob/main/documentation/docs/10-introduction/20-faq.md#_snippet_4
+
+LANGUAGE: Shell
+CODE:
+```
+deno run npm:sv create
+```
+
+----------------------------------------
+
+TITLE: Executing Published Svelte CLI Community Add-on via sv (Shell)
+DESCRIPTION: This command uses the `sv` CLI tool to add and execute a community add-on that has been published to npm. Users should replace `addon-package-name` with the actual name of the published package to install and run it.
+SOURCE: https://github.com/sveltejs/cli/blob/main/community-addon-template/README.md#_snippet_4
+
+LANGUAGE: shell
+CODE:
+```
+npx sv add --community npm:addon-package-name
+```
