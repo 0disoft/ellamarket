@@ -1,0 +1,5 @@
+📝 docs: update database schema to v1.3
+
+- Add membership, subscription, and shipping policies
+- Implement detailed point management system (accumulation, expiration)
+- Refine order status and add tracking columns
