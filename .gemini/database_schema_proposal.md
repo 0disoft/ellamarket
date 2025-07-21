@@ -6,11 +6,11 @@
 
 ## 2. 테이블 상세
 
-### 가. `users` (Supabase Auth 연동)
+### `users` (Supabase Auth 연동)
 
 - Supabase의 내장 `auth.users` 테이블을 그대로 활용합니다.
 
-### 나. `profiles`
+### `profiles`
 
 - 사용자의 추가 정보 및 멤버십/구독 상태를 저장합니다. **`avatar_url`, `recommended_by` 컬럼이 제거되었습니다.**
 
@@ -23,7 +23,7 @@
 | `is_subscribed`    | `boolean`                       | `default: false`                                          | 월간 구독 여부          |
 | `subscription_start_date` | `timestamp with time zone` | `nullable`                                                | 구독 시작일             |
 
-### 다. `shared_links` (신규)
+### `shared_links` (신규)
 
 - **사용자가 생성한 상품 공유 링크 정보를 관리하고, 리워드 지급을 추적합니다.**
 
@@ -35,7 +35,7 @@
 | `unique_token` | `text`                     | `unique`                                            | 공유 URL에 사용될 고유 식별자 (e.g., short URL) |
 | `created_at`   | `timestamp with time zone` | `default: now()`                                    |                                          |
 
-### 라. `addresses`
+### `addresses`
 
 - 사용자가 여러 배송지를 저장하고 관리할 수 있도록 지원합니다. (v1.4와 동일)
 
@@ -49,9 +49,41 @@
 | `is_default`     | `boolean`   | `default: false`                                          | 기본 배송지 여부   |
 | `created_at`     | `timestamp with time zone` | `default: now()`                                          |                    |
 
-### 마. `membership_tiers`, `subscriptions`, `products`
+### `membership_tiers`
 
-- 이전 버전(v1.4)과 동일합니다.
+- 멤버십 등급별 혜택 정보를 관리합니다. (v1.2와 동일)
+
+| 컬럼명         | 데이터 타입 | 제약 조건 | 비고 (예시)        |
+| --------------- | ----------- | --------- | ------------------ |
+| `tier_name`     | `text`      | `PK`      | 'Topaz', 'Emerald', 'Diamond' |
+| `min_purchase`  | `integer`   |           | 100000, 200000, 300000 |
+| `discount_rate` | `numeric`   |           | 0.03, 0.06, 0.09   |
+
+### `subscriptions`
+
+- 구독 상품 정보를 관리합니다. (v1.2와 동일)
+
+| 컬럼명                   | 데이터 타입 | 제약 조건 | 비고 (예시) |
+| ------------------------- | ----------- | --------- | ----------- |
+| `id`                      | `integer`   | `PK`      | 1           |
+| `name`                    | `text`      |           | '월간 구독' |
+| `price`                   | `integer`   |           | 7700        |
+| `point_accumulation_rate` | `numeric`   |           | 0.04        |
+
+### `products`
+
+- 판매할 상품 정보를 관리합니다. (v1.2와 동일)
+
+| 컬럼명           | 데이터 타입                     | 제약 조건              |
+| ---------------- | ------------------------------- | ---------------------- |
+| `id`             | `bigint`                        | `PK`, `auto-increment` |
+| `name`           | `text`                          |                        |
+| `description`    | `text`                          |                        | 마크다운 형식 (이미지, 텍스트 혼합 가능) |
+| `image_url`      | `text[]`                        |                        |
+| `price`          | `integer`                       |                        |
+| `stock_quantity` | `integer`                       |                        |
+| `category`       | `text`                          |                        |
+| `created_at`     | `timestamp with time zone`      |                        |
 
 ### 바. `orders`
 
@@ -75,11 +107,18 @@
 | `shipped_at`       | `timestamp with time zone`      | `nullable`                                      | 배송 시작일                        |
 | `confirmed_at`     | `timestamp with time zone`      | `nullable`                                      | 구매 확정일                        |
 
-### 사. `order_items`
+### `order_items`
 
-- 이전 버전(v1.4)과 동일합니다.
+- 각 주문에 포함된 상품들의 상세 내역입니다.
 
-### 아. `point_history`
+| 컬럼명           | 데이터 타입 | 제약 조건                                  |
+| ---------------- | ----------- | ------------------------------------------ |
+| `order_id`       | `bigint`    | `PK`, `FK` (references `orders.id`)        |
+| `product_id`     | `bigint`    | `PK`, `FK` (references `products.id`)      |
+| `quantity`       | `integer`   |                                            |
+| `price_per_item` | `integer`   |  |
+
+### `point_history`
 
 - `reason`의 예시에 **'공유 리워드'**가 추가되었습니다.
 
